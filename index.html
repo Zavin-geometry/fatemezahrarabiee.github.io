@@ -1,250 +1,246 @@
-<!doctype html>
+
+<!DOCTYPE html>
 <html lang="fa" dir="rtl">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>زاوین — درک و فهم شهودی اندازه زاویه‌ها</title>
-  <meta name="description" content="زاوین — وسیله‌ی آموزشی برای درک شهودی اندازه زاویه‌ها. نمایش نمونه‌ها و راهنمای استفاده." />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <style>
-    :root{
-      --bg:#FBF9F6;
-      --card:#ffffff;
-      --accent:#7FB77E;
-      --accent-2:#A7D7B7;
-      --muted:#556655;
-      --radius:14px;
-      --maxw:1100px;
-      --gap:20px;
-    }
+  <title>زاوین | یادگیری شهودی هندسه</title>
 
-    *{box-sizing:border-box}
-    html,body{height:100%}
-    body{
-      margin:0;
-      font-family: "Vazirmatn", "Segoe UI", Tahoma, Arial, sans-serif;
-      background:linear-gradient(180deg,var(--bg), #f7f7f5);
-      color:#222;
-      direction:rtl;
-      line-height:1.6;
-      padding:24px 12px;
-      display:flex;
-      justify-content:center;
-    }
+  <meta name="description"
+    content="زاوین، ابزار کمک‌آموزشی تعاملی برای درک شهودی مفاهیم هندسی و کشف قضایای هندسه.">
 
-    .wrap{width:100%;max-width:var(--maxw)}
-    header{
-      display:flex;
-      align-items:center;
-      gap:12px;
-      margin-bottom:18px;
-      justify-content:space-between;
-    }
+  <meta name="theme-color" content="#171b35">
 
-    /* سمت چپ: عنوان برند */
-    .brand-left{display:flex;align-items:center;gap:12px}
-    .logo{
-      width:72px;height:72px;border-radius:14px;
-      background:linear-gradient(135deg,var(--accent),var(--accent-2));
-      display:flex;align-items:center;justify-content:center;
-      color:white;font-weight:800;font-size:28px;box-shadow:0 8px 26px rgba(127,183,126,0.15);
-    }
-    .brand-title{display:flex;flex-direction:column}
-    h1{margin:0;font-size:28px}
-    .subtitle{margin-top:4px;color:var(--muted)}
-
-    /* سمت راست: مربع سبز با لوگوی گونیا */
-    .badge{
-      width:64px;height:64px;border-radius:10px;
-      background:var(--accent); display:flex; align-items:center; justify-content:center;
-      box-shadow:0 6px 18px rgba(127,183,126,0.16);
-    }
-    .badge svg{width:42px;height:42px;display:block}
-
-    main{display:flex;flex-direction:column;gap:18px}
-    .card{background:var(--card);border-radius:var(--radius);padding:18px;box-shadow:0 8px 28px rgba(45,60,40,0.06)}
-
-    .intro{padding:20px;border-radius:12px;background:linear-gradient(180deg, rgba(167,215,183,0.18), rgba(127,183,126,0.04));}
-    .intro p{margin:8px 0 0;color:var(--muted)}
-
-    .examples{display:flex;flex-direction:column;gap:18px}
-    .example{display:grid;grid-template-columns:420px 1fr;gap:18px;align-items:center}
-    @media (max-width:920px){ .example{grid-template-columns:1fr;} }
-
-    .media{border-radius:12px;overflow:hidden;background:#000;display:flex;align-items:center;justify-content:center;min-height:240px}
-    .media video{width:100%;height:100%;object-fit:cover;display:block}
-
-    .text{padding:12px}
-    .example-title{margin:0;font-size:18px;color:#123;display:flex;align-items:center;gap:10px}
-    .example-title .dot{width:10px;height:10px;border-radius:6px;background:var(--accent);display:inline-block}
-
-    .explain{margin-top:8px;color:var(--muted);min-height:110px;border-radius:10px;padding:12px;background:linear-gradient(180deg,#ffffff, #fbfbfb);box-shadow:inset 0 1px 0 rgba(0,0,0,0.02)}
-    .explain .typing{white-space:pre-wrap;word-break:break-word;font-size:15px;color:#222;min-height:88px}
-    .hint{font-size:13px;color:var(--muted);margin-top:8px}
-
-    footer{margin-top:10px;text-align:center;color:var(--muted);font-size:14px}
-
-    @media (max-width:520px){
-      body{padding:14px 10px}
-      .logo{width:58px;height:58px;font-size:22px}
-      h1{font-size:22px}
-      .badge{width:54px;height:54px}
-    }
-  </style>
+  <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-  <div class="wrap">
-    <header>
-      <div class="brand-left">
-        <div class="logo" aria-hidden>Za</div>
-        <div class="brand-title">
-          <h1>زاوین</h1>
-          <div class="subtitle">درک و فهم شهودی اندازه زاویه‌ها</div>
+
+  <!-- سربرگ سایت -->
+  <header class="site-header">
+    <a href="#home" class="brand" aria-label="صفحه اصلی زاوین">
+      <span class="brand-symbol">ز</span>
+      <span class="brand-name">
+        <strong>زاوین</strong>
+        <small>یادگیری شهودی هندسه</small>
+      </span>
+    </a>
+
+    <nav class="main-nav" aria-label="منوی اصلی">
+      <a href="#home">صفحه اصلی</a>
+      <a href="#about">معرفی زاوین</a>
+      <a href="#learning">آموزش‌ها</a>
+      <a href="#digital">زاوین دیجیتال</a>
+    </nav>
+  </header>
+
+
+  <main>
+
+    <!-- بخش معرفی اصلی -->
+    <section class="hero" id="home">
+
+      <div class="hero-content">
+        <span class="eyebrow">
+          یادگیری هندسه، فراتر از فرمول‌ها
+        </span>
+
+        <h1>
+          زاویه‌ها را ببین،
+          <span>هندسه را کشف کن.</span>
+        </h1>
+
+        <p class="hero-description">
+          زاوین یک ابزار کمک‌آموزشی برای تجربه‌کردن مفاهیم هندسی،
+          مشاهدهٔ روابط میان شکل‌ها و رسیدن به درکی شهودی از
+          قضایای هندسه است.
+        </p>
+
+        <div class="hero-actions">
+          <a href="#about" class="button button-primary">
+            آشنایی با زاوین
+          </a>
+
+          <a href="#learning" class="button button-secondary">
+            مشاهدهٔ فعالیت‌های آموزشی
+          </a>
         </div>
       </div>
 
-      <!-- لوگوی جدید: گونیا گرافیکی -->
-      <div class="badge" title="لوگوی زاوین — گونیا آموزشی">
-        <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" aria-label="لوگو زاوین">
-          <g stroke="#fff" stroke-width="3" stroke-linejoin="round" fill="none">
-            <!-- بدنه‌ی گونیا -->
-            <path d="M14 50 L50 14 L50 50 Z" fill="none"/>
-            <!-- خطوط داخلی برای نمایش زاویه راست -->
-            <path d="M26 50 L50 26" />
-            <path d="M38 50 L50 38" />
-            <!-- نشانهٔ زاویه راست -->
-            <path d="M14 50 L26 50 L26 38" />
-          </g>
-        </svg>
+      <div class="hero-visual" aria-label="نمایش هندسی نمادین زاوین">
+        <div class="geometry-orbit orbit-one"></div>
+        <div class="geometry-orbit orbit-two"></div>
+
+        <div class="geometry-center">
+          <svg viewBox="0 0 240 220"
+               role="img"
+               aria-label="طرح هندسی خطوط و زاویه‌ها"
+               xmlns="http://www.w3.org/2000/svg">
+
+            <defs>
+              <linearGradient id="lineGradient"
+                              x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0%" stop-color="#b6a7ff"/>
+                <stop offset="100%" stop-color="#82d8c4"/>
+              </linearGradient>
+            </defs>
+
+            <g fill="none"
+               stroke="url(#lineGradient)"
+               stroke-width="3.5"
+               stroke-linecap="round"
+               stroke-linejoin="round">
+
+              <path d="M35 175 L120 35 L205 175 Z"/>
+              <path d="M35 175 L165 105"/>
+              <path d="M120 35 L105 135"/>
+              <path d="M105 135 L205 175"/>
+              <path d="M83 175 A48 48 0 0 1 59 135"/>
+            </g>
+
+            <g fill="#f4d58d">
+              <circle cx="35" cy="175" r="5"/>
+              <circle cx="120" cy="35" r="5"/>
+              <circle cx="205" cy="175" r="5"/>
+              <circle cx="105" cy="135" r="5"/>
+            </g>
+          </svg>
+        </div>
       </div>
-    </header>
 
-    <main>
-        <section class="card intro">
-  <h2>معرفی</h2>
-  <p>
-    زاوین یک ابزار ساده و قابل لمس برای درک بهتر مفهوم زاویه‌ها و شکل‌های هندسی است.
-    با زاوین، یادگیری از یک موضوع صرفاً تئوری، به یک تجربه‌ی دیداری و عملی تبدیل می‌شود.
-    این ابزار کمک می‌کند دانش‌آموزان در هر پایه تحصیلی، رابطه‌ی میان خطوط، زاویه‌ها
-    و شکل‌های هندسی را بهتر ببینند، مقایسه کنند و نتیجه‌گیری‌های دقیق‌تری داشته باشند
+      <div class="hero-bottom">
+        <span>مشاهده</span>
+        <span class="hero-bottom-line"></span>
+        <span>آزمایش</span>
+        <span class="hero-bottom-line"></span>
+        <span>کشف</span>
+      </div>
 
-    این ابزار می تواند در کلاس های درس، نمایشگاه های علمی و فعالیت های گروهی مورد استفاده قرار گیرد و دانش آموز را از شنونده منفعل به کاشف فعال تبدیل کند.
-  </p>
-</section>
-<section class="card" style="padding:22px;">
-  <h2 style="margin-top:0;margin-bottom:14px;">کاربردهای زاوین</h2>
+    </section>
 
-  <div style="display:flex;flex-direction:column;gap:14px;">
 
-    <div style="display:flex;align-items:center;gap:14px;padding:14px;border-radius:12px;background:#ffffff;border:1px solid #e9e9e9;">
-      <span style="font-size:24px;">🎨</span>
-      <div><strong>پایه‌ی ابتدایی:</strong> کمک به دیدن و لمس زاویه‌ها و شکل‌ها برای درک بهتر و واقعی‌تر.</div>
-    </div>
+    <!-- معرفی ابزار -->
+    <section class="content-section" id="about">
 
-    <div style="display:flex;align-items:center;gap:14px;padding:14px;border-radius:12px;background:#ffffff;border:1px solid #e9e9e9;">
-      <span style="font-size:24px;">📏</span>
-      <div><strong>راهنمایی (متوسطه‌ی اول):</strong> اندازه‌گیری زاویه‌ها و مقایسه‌ی آن‌ها به کمک نقاله و مشاهده‌ی تفاوت‌ها.</div>
-    </div>
+      <div class="section-heading">
+        <span class="eyebrow">دربارهٔ پروژه</span>
+        <h2>هندسه را تجربه کن، نه فقط حفظ</h2>
 
-    <div style="display:flex;align-items:center;gap:14px;padding:14px;border-radius:12px;background:#ffffff;border:1px solid #e9e9e9;">
-      <span style="font-size:24px;">🔺</span>
-      <div><strong>دبیرستان (متوسطه‌ی دوم):</strong> فهم بهتر رابطه‌های هندسی و مشاهده‌ی تغییر شکل‌ها در هنگام اثبات مفاهیم.</div>
-    </div>
+        <p>
+          زاوین با تبدیل مفاهیم انتزاعی هندسه به تجربه‌ای دیداری
+          و عملی، فرصتی فراهم می‌کند تا دانش‌آموزان روابط میان
+          خطوط، زاویه‌ها و شکل‌ها را بررسی کنند و با مشاهده،
+          اندازه‌گیری و استدلال به نتیجه برسند.
+        </p>
+      </div>
 
-    <div style="display:flex;align-items:center;gap:14px;padding:14px;border-radius:12px;background:#ffffff;border:1px solid #e9e9e9;">
-      <span style="font-size:24px;">🤝</span>
-      <div><strong>کلاس‌های گروهی:</strong> تقویت مهارت گفتگو، همکاری و کشف جمعی در حل مسئله.</div>
-    </div>
+      <div class="feature-grid">
 
-    <div style="display:flex;align-items:center;gap:14px;padding:14px;border-radius:12px;background:#ffffff;border:1px solid #e9e9e9;">
-      <span style="font-size:24px;">👋</span>
-      <div><strong>دانش‌آموزان با سبک یادگیری متفاوت:</strong> مخصوص کسانی که با «دیدن» و «انجام دادن» بهتر یاد می‌گیرند.</div>
-    </div>
+        <article class="feature-card">
+          <span class="feature-number">۰۱</span>
+          <h3>یادگیری دیداری و عملی</h3>
+          <p>
+            مشاهده و بررسی شکل‌های هندسی با استفاده از یک ابزار
+            فیزیکی قابل لمس و قابل استفاده در فعالیت‌های کلاسی.
+          </p>
+        </article>
 
-  </div>
-</section>
-.</p>
-      </section>
-      <section id="videos" class="section">
+        <article class="feature-card">
+          <span class="feature-number">۰۲</span>
+          <h3>کشف روابط هندسی</h3>
+          <p>
+            بررسی اندازهٔ زاویه‌ها و ارتباط میان اجزای شکل‌ها
+            برای شکل‌گیری درکی عمیق‌تر از مفاهیم هندسه.
+          </p>
+        </article>
 
-  <div class="video-block">
-    <h2>اندازه‌گیری زاویه‌های داخلی مثلث</h2>
-    <video controls style="width:100%;border-radius:12px;margin-top:12px;">
-      <source src="assets/example1.mp4" type="video/mp4">
-    </video>
-    <p>در این ویدیو دانش‌آموز زاویه‌های داخلی یک مثلث را اندازه‌گیری می‌کند و مشاهده می‌شود که مجموع آن‌ها برابر ۱۸۰ درجه است. این کار کمک می‌کند مفهوم مجموع زاویه‌های مثلث نه فقط حفظ ، بلکه درک شود.</p>
-  </div>
+        <article class="feature-card">
+          <span class="feature-number">۰۳</span>
+          <h3>مشارکت در یادگیری</h3>
+          <p>
+            فراهم‌کردن زمینهٔ فعالیت گروهی، طرح پرسش،
+            آزمودن فرضیه‌ها و گفت‌وگو دربارهٔ نتایج.
+          </p>
+        </article>
 
-  <div class="video-block" style="margin-top:40px;">
-    <h2>زاویه‌های داخلی مربع و قائم بودن آن‌ها</h2>
-    <video controls style="width:100%;border-radius:12px;margin-top:12px;">
-      <source src="assets/example2.mp4" type="video/mp4">
-    </video>
-    <p>در این نمونه، شکل مربع بررسی می‌شود. دانش‌آموز با اندازه‌گیری زاویه‌ها مشاهده می‌کند که همهٔ زاویه‌ها قائم هستند و مجموع زاویه‌ها ۳۶۰ درجه است.</p>
-  </div>
+      </div>
+    </section>
 
-  <div class="video-block" style="margin-top:40px;">
-    <h2>رابطهٔ زاویهٔ مرکزی و زاویهٔ محاطی دایره</h2>
-    <video controls style="width:100%;border-radius:12px;margin-top:12px;">
-      <source src="assets/example3.mp4" type="video/mp4">
-    </video>
-    <p>در این قسمت، دو زاویه روی یک دایره بررسی می‌شوند: یکی در مرکز و دیگری روی محاط. زاوین کمک می‌کند این رابطه به‌صورت شهودی دیده و فهمیده شود که اندازه زاویه مرکزی دوبرابر اندازه زاویه محاطی روبه رو به یک کمان است..</p>
-  </div>
 
-  <div class="video-block" style="margin-top:40px;">
-    <h2>اثبات شهودی هشت‌ضلعی بودن شکل (تمرین ۸ صفحه ۳۰ هندسه ۲)</h2>
-    <video controls style="width:100%;border-radius:12px;margin-top:12px;">
-      <source src="assets/example4.mp4" type="video/mp4">
-    </video>
-    <p>در این فعالیت، دانش‌آموز ابتدا زاویه‌های شکل را اندازه‌گیری و سپس اضلاع را مقایسه می‌کند. با مشاهدهٔ مستقیم به این نتیجه می‌رسد که شکل یک هشت‌ضلعی است، بدون نیاز به حفظ کردن فرمول یا اثبات خشک.</p>
-  </div>
+    <!-- بخش آموزش‌ها؛ محتوای ویدئوها در مرحله بعد اضافه می‌شود -->
+    <section class="content-section learning-section" id="learning">
 
-</section>
-<footer>
-  <div style="
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    gap:28px;
-    margin-top:40px;
-    flex-wrap:wrap;
-    text-align:center;
-  ">
+      <div class="section-heading">
+        <span class="eyebrow">کتابخانهٔ آموزشی</span>
+        <h2>هندسه را از نزدیک ببین</h2>
 
-    <!-- متن سمت راست -->
-    <div style="font-size:15px; color:#3f604d;">
-      </strong>فاطمه زهرا ربیعی، ستایش رمضانیان،
-      فاطمه ادبی، فاطره صباغ</strong><br>
-    </div>
+        <p>
+          مجموعه‌ای از فعالیت‌ها و نمونه‌های آموزشی زاوین؛
+          از شناخت زاویه‌ها تا بررسی روابط و قضایای هندسی.
+        </p>
+      </div>
 
-    <!-- لوگو وسط -->
-    <img src="assets/logo.jpg" alt="لوگوی زاوین" 
-         style="width:135px; opacity:0.95;">
+      <div class="section-placeholder">
+        <span class="placeholder-symbol">∠</span>
+        <h3>فعالیت‌های آموزشی زاوین</h3>
+        <p>
+          در این بخش، ویدئوهای آموزشی به‌صورت کارت‌های افقی
+          نمایش داده خواهند شد.
+        </p>
+      </div>
 
-    <!-- متن سمت چپ -->
-    <div style="font-size:14px; color:#678270;">
-      © تمام حقوق محفوظ است
-    </div>
+    </section>
 
-  </div>
-</footer>
-    </main>
-  </div>
 
-  <script>
-    function setupTyping(videoId, typingId){
-      const video=document.getElementById(videoId);
-      const el=document.getElementById(typingId);
-      if(!video||!el)return;
-      const txt=el.dataset.lines||"";let i=0,timer;
-      video.addEventListener('play',()=>{el.textContent="";i=0;clearInterval(timer);
-        timer=setInterval(()=>{if(i<txt.length){el.textContent+=txt[i++]}else clearInterval(timer)},35);
-      });
-      video.addEventListener('pause',()=>clearInterval(timer));
-      video.addEventListener('ended',()=>{el.textContent=txt;clearInterval(timer)});
-    }
-    setupTyping('video-1','typing-1');
-    setupTyping('video-2','typing-2');
-  </script>
+    <!-- بخش زاوین دیجیتال؛ ابزار پس از تکمیل متصل می‌شود -->
+    <section class="content-section digital-section" id="digital">
+
+      <div class="digital-panel">
+
+        <div class="digital-content">
+          <span class="eyebrow">تجربهٔ تعاملی</span>
+          <h2>زاوین دیجیتال</h2>
+
+          <p>
+            فضایی برای بررسی تعاملی شکل‌ها، مشاهدهٔ تغییرات
+            هندسی و کاوش در روابط و قضایای هندسه.
+          </p>
+
+          <span class="coming-soon">
+            در حال توسعه
+          </span>
+        </div>
+
+        <div class="digital-symbol" aria-hidden="true">
+          <span>∠</span>
+          <span>△</span>
+          <span>○</span>
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- پابرگ -->
+  <footer class="site-footer">
+
+    <a href="#home" class="footer-brand">زاوین</a>
+
+    <p>
+      زاوین، جایی که زاویه‌ها زنده می‌شوند.
+    </p>
+
+    <div class="footer-divider"></div>
+
+    <small>
+      © تمامی حقوق مادی و معنوی این اثر محفوظ است.
+    </small>
+
+  </footer>
+
 </body>
 </html>
