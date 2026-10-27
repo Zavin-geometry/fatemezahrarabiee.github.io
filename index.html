@@ -1,402 +1,85 @@
-<!DOCTYPE html>
+DOCTYPE html>
 <html lang="fa" dir="rtl">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <title>زاوین | تجربه، مشاهده و کشف هندسه</title>
-
-  <meta name="description"
-        content="زاوین، ابزار کمک‌آموزشی برای یادگیری شهودی مفاهیم هندسی، بررسی روابط میان زاویه‌ها و کشف قضایای هندسه.">
-
-  <meta name="theme-color" content="#26352d">
-
+  <meta name="theme-color" content="#f7f5ec">
+  <meta name="description" content="زاوین؛ تجربه‌ای تعاملی برای یادگیری هندسه، زاویه‌ها و چندضلعی‌ها.">
+  <title>زاوین | یادگیری هندسه با تجربه</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700;800&display=swap"
-        rel="stylesheet">
-
+  <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
+  <header class="site-header">
+    <a class="brand" href="#home" aria-label="زاوین، صفحه اصلی"><span class="brand-mark">ز</span><span>زاوین</span></a>
+    <nav class="main-nav" aria-label="ناوبری اصلی">
+      <a href="#home">خانه</a><a href="#about">درباره زاوین</a><a href="#applications">کاربردها</a>
+      <a href="#videos">ویدئوهای آموزشی</a><a href="#digital">زاوین دیجیتال</a><a href="#team">تیم ما</a>
+    </nav>
+    <a class="header-cta" href="#digital">شروع یادگیری <span aria-hidden="true">←</span></a>
+  </header>
 
-<header class="site-header">
-  <a href="#home" class="brand" aria-label="صفحه اصلی زاوین">
-    <span class="brand-symbol">ز</span>
-    <span class="brand-name">
-      <strong>زاوین</strong>
-      <small>یادگیری شهودی هندسه</small>
-    </span>
-  </a>
-
-  <nav class="main-nav" aria-label="منوی اصلی">
-    <a href="#home">صفحه اصلی</a>
-    <a href="#about">معرفی زاوین</a>
-    <a href="#applications">کاربردهای آموزشی</a>
-    <a href="#learning">کتابخانه ویدئو</a>
-    <a href="#digital">زاوین دیجیتال</a>
-    <a href="#team">سازندگان</a>
-  </nav>
-</header>
-
-<main>
-
-  <!-- صفحه آغازین -->
-  <section class="hero" id="home">
-
-    <div class="hero-content">
-      <span class="eyebrow">ابزاری برای تجربه‌کردن هندسه</span>
-
-      <h1 class="hero-title">ZAVIN</h1>
-      <h2 class="hero-persian">زاوین؛ هندسه را کشف کن.</h2>
-
-      <p class="hero-description">
-        از مشاهده تا استدلال؛ زاوین بستری برای تجربهٔ دیداری و عملی
-        مفاهیم هندسی است تا یادگیرنده بتواند روابط میان خطوط،
-        زاویه‌ها و شکل‌ها را بررسی کند و مسیر کشف قضایای هندسی
-        را با مشارکت فعال خود بپیماید.
-      </p>
-
-      <div class="hero-actions">
-        <a class="button button-primary" href="#about">
-          آشنایی با زاوین
-        </a>
-        <a class="button button-secondary" href="#learning">
-          مشاهدهٔ فعالیت‌های آموزشی
-        </a>
+  <main>
+    <section class="hero section-wrap" id="home">
+      <div class="hero-copy">
+        <span class="eyebrow"><span class="eyebrow-dot"></span> یادگیری هندسه، به شیوه‌ای تازه</span>
+        <h1>هندسه را فقط<br><span class="highlight">یاد نگیر؛ تجربه‌اش کن.</span></h1>
+        <p class="hero-text">زاوین فضایی برای کشف رابطه‌های هندسی است؛ جایی که با دیدن، ساختن و آزمودن، مفاهیم ریاضی روشن‌تر می‌شوند.</p>
+        <div class="hero-actions"><a class="button button-primary" href="#digital">ورود به زاوین دیجیتال <span>←</span></a><a class="text-link" href="#about">با زاوین آشنا شو <span>↓</span></a></div>
+        <div class="hero-note"><span class="note-icon">✳</span><span>کشف کن، آزمایش کن، یاد بگیر.</span></div>
       </div>
-
-      <div class="hero-tags">
-        <span>مشاهده</span>
-        <span>اندازه‌گیری</span>
-        <span>فرضیه‌سازی</span>
-        <span>استدلال</span>
+      <div class="hero-art" aria-label="تصویرسازی هندسی">
+        <div class="art-orbit orbit-one"></div><div class="art-orbit orbit-two"></div>
+        <div class="art-card card-circle"><svg viewBox="0 0 220 220" role="img" aria-label="دایره و زاویه"><circle cx="110" cy="110" r="78" fill="none" stroke="#183c36" stroke-width="2.5"/><circle cx="110" cy="110" r="4" fill="#183c36"/><path d="M110 110 L177 70 M110 110 L187 132" stroke="#d17b58" stroke-width="3" stroke-linecap="round"/><path d="M145 89 A40 40 0 0 1 149 121" fill="none" stroke="#d17b58" stroke-width="3"/><circle cx="177" cy="70" r="5" fill="#d17b58"/><circle cx="187" cy="132" r="5" fill="#d17b58"/><text x="99" y="128" font-size="13" fill="#183c36">O</text></svg></div>
+        <div class="floating-tag tag-angle">∠ زاویه‌ها</div><div class="floating-tag tag-shape">△ شکل‌ها</div><div class="art-spark">✳</div>
       </div>
-    </div>
+      <div class="hero-bottom"><span>یادگیری فعال</span><span class="bottom-line"></span><span>هندسه برای همه</span><span class="bottom-line"></span><span>تجربه‌ی تعاملی</span></div>
+    </section>
 
-    <div class="hero-visual" aria-hidden="true">
-      <div class="visual-ring ring-one"></div>
-      <div class="visual-ring ring-two"></div>
-
-      <div class="geometry-card">
-        <svg viewBox="0 0 320 290" xmlns="http://www.w3.org/2000/svg">
-          <defs>
-            <linearGradient id="geoLine" x1="0" y1="0" x2="1" y2="1">
-              <stop offset="0%" stop-color="#b4a6e8"/>
-              <stop offset="100%" stop-color="#8bcbb0"/>
-            </linearGradient>
-          </defs>
-
-          <g fill="none" stroke="url(#geoLine)" stroke-width="4"
-             stroke-linecap="round" stroke-linejoin="round">
-            <path d="M35 245 L160 35 L285 245 Z"/>
-            <path d="M35 245 L235 160"/>
-            <path d="M160 35 L140 200"/>
-            <path d="M140 200 L285 245"/>
-            <path d="M82 245 A55 55 0 0 1 64 198"/>
-            <path d="M130 230 L130 220 L140 220"/>
-          </g>
-
-          <g fill="#e6c77b">
-            <circle cx="35" cy="245" r="6"/>
-            <circle cx="160" cy="35" r="6"/>
-            <circle cx="285" cy="245" r="6"/>
-            <circle cx="140" cy="200" r="6"/>
-            <circle cx="235" cy="160" r="6"/>
-          </g>
-        </svg>
+    <section class="section-wrap about-section" id="about">
+      <div class="section-heading"><span class="eyebrow">داستان زاوین</span><h2>وقتی مفهوم‌ها <span class="highlight">قابل لمس</span> می‌شوند</h2><p>زاوین کمک می‌کند از فرمول‌ها فراتر برویم و منطق پشت شکل‌ها را کشف کنیم.</p></div>
+      <div class="feature-grid">
+        <article class="feature-card"><div class="feature-icon icon-green">◉</div><h3>یادگیری با کشف</h3><p>به‌جای حفظ‌کردن، رابطه‌ها را با مشاهده و تجربه پیدا کن.</p></article>
+        <article class="feature-card"><div class="feature-icon icon-peach">⌁</div><h3>تعامل و آزمون</h3><p>شکل‌ها را بررسی کن، اندازه‌ها را تغییر بده و نتیجه را ببین.</p></article>
+        <article class="feature-card"><div class="feature-icon icon-lilac">✳</div><h3>از ایده تا درک</h3><p>مفاهیم هندسی را قدم‌به‌قدم و با مثال‌های دیداری دنبال کن.</p></article>
       </div>
+    </section>
 
-      <span class="floating-label label-one">زاویه</span>
-      <span class="floating-label label-two">کشف رابطه</span>
-    </div>
-
-    <div class="hero-bottom">
-      <span>از تجربه</span>
-      <span class="hero-line"></span>
-      <span>به مشاهده</span>
-      <span class="hero-line"></span>
-      <span>به استدلال</span>
-    </div>
-
-  </section>
-
-
-  <!-- معرفی علمی -->
-  <section class="content-section" id="about">
-
-    <div class="section-heading">
-      <span class="eyebrow">دربارهٔ ابزار</span>
-      <h2>هندسه را تجربه کن، نه فقط حفظ</h2>
-
-      <p>
-        زاوین یک ابزار کمک‌آموزشی فیزیکی است که با فراهم‌کردن
-        امکان مشاهده، بررسی و اندازه‌گیری روابط هندسی، به یادگیرنده
-        فرصت می‌دهد مفاهیم انتزاعی را از طریق فعالیت عملی دنبال کند.
-        این ابزار می‌تواند در طراحی فعالیت‌های اکتشافی، گفت‌وگوی
-        ریاضی و شکل‌گیری استدلال هندسی به کار گرفته شود.
-      </p>
-    </div>
-
-    <div class="feature-grid">
-
-      <article class="feature-card">
-        <span class="feature-number">۰۱</span>
-        <h3>بازنمایی دیداری مفاهیم</h3>
-        <p>
-          فراهم‌کردن امکان مشاهدهٔ روابط میان خطوط، زاویه‌ها و
-          اجزای شکل‌های هندسی، پیش از ورود به بیان نمادی و فرمولی.
-        </p>
-      </article>
-
-      <article class="feature-card">
-        <span class="feature-number">۰۲</span>
-        <h3>یادگیری اکتشافی</h3>
-        <p>
-          تشویق یادگیرنده به طرح پرسش، اندازه‌گیری، مقایسه،
-          پیش‌بینی نتیجه و بررسی فرضیه‌های هندسی.
-        </p>
-      </article>
-
-      <article class="feature-card">
-        <span class="feature-number">۰۳</span>
-        <h3>پیوند تجربه و استدلال</h3>
-        <p>
-          ایجاد زمینه برای حرکت از مشاهدهٔ یک رابطه به بیان
-          ریاضی آن و بررسی چرایی درستی آن با استدلال.
-        </p>
-      </article>
-
-    </div>
-
-    <aside class="scientific-note">
-      <strong>رویکرد آموزشی زاوین</strong>
-      <p>
-        مشاهده و اندازه‌گیری می‌توانند نقطهٔ آغاز کشف یک رابطه
-        باشند؛ اما برای اثبات یک قضیه، لازم است یافته‌ها با
-        استدلال ریاضی تکمیل شوند. زاوین با هدف پشتیبانی از این
-        مسیر آموزشی معرفی می‌شود.
-      </p>
-    </aside>
-
-  </section>
-
-
-  <!-- کاربردها در مقاطع تحصیلی -->
-  <section class="content-section applications-section" id="applications">
-
-    <div class="section-heading">
-      <span class="eyebrow">کاربرد در کلاس درس</span>
-      <h2>یک ابزار، مسیرهای گوناگون یادگیری</h2>
-      <p>
-        فعالیت‌های پیشنهادی با توجه به سطح یادگیرنده و اهداف
-        آموزشی هر مقطع قابل تنظیم هستند.
-      </p>
-    </div>
-
-    <div class="application-grid">
-
-      <article class="application-card">
-        <div class="application-icon" aria-hidden="true">△</div>
-        <span class="application-level">مقطع ابتدایی</span>
-        <h3>دیدن و شناختن شکل‌ها</h3>
-        <p>
-          آشنایی با شکل‌های هندسی، تشخیص زاویه‌ها، مقایسهٔ
-          شکل‌ها و تقویت زبان توصیف هندسی از طریق مشاهده و فعالیت عملی.
-        </p>
-        <a href="#learning" class="text-link">مشاهدهٔ فعالیت‌ها ←</a>
-      </article>
-
-      <article class="application-card">
-        <div class="application-icon" aria-hidden="true">∠</div>
-        <span class="application-level">متوسطهٔ اول</span>
-        <h3>اندازه‌گیری و کشف رابطه‌ها</h3>
-        <p>
-          بررسی اندازهٔ زاویه‌ها، روابط زاویه‌ای و ویژگی‌های
-          چندضلعی‌ها با استفاده از اندازه‌گیری، مقایسه و طرح فرضیه.
-        </p>
-        <a href="#learning" class="text-link">مشاهدهٔ فعالیت‌ها ←</a>
-      </article>
-
-      <article class="application-card">
-        <div class="application-icon" aria-hidden="true">∑</div>
-        <span class="application-level">متوسطهٔ دوم</span>
-        <h3>تحلیل و استدلال هندسی</h3>
-        <p>
-          بررسی روابط پیچیده‌تر، صورت‌بندی حدس‌های هندسی و
-          پیوند دادن تجربهٔ دیداری با استدلال و اثبات ریاضی.
-        </p>
-        <a href="#learning" class="text-link">مشاهدهٔ فعالیت‌ها ←</a>
-      </article>
-
-    </div>
-
-  </section>
-
-
-  <!-- کتابخانه ویدئو -->
-  <section class="content-section learning-section" id="learning">
-
-    <div class="section-heading">
-      <span class="eyebrow">کتابخانهٔ آموزشی</span>
-      <h2>هندسه را از نزدیک ببین</h2>
-      <p>
-        نمونه‌هایی از فعالیت‌های آموزشی زاوین؛ برای مشاهدهٔ
-        هر فعالیت، کارت موردنظر را انتخاب کنید.
-      </p>
-    </div>
-
-    <div class="video-grid">
-
-      <a class="video-card" href="video1.html">
-        <div class="video-thumbnail">
-          <video muted playsinline preload="metadata" aria-label="پیش‌نمایش ویدئوی مجموع زاویه‌های مثلث">
-            <source src="assets/example1.mp4" type="video/mp4">
-          </video>
-          <span class="play-icon" aria-hidden="true">▶</span>
-          <span class="video-category">مجموع زاویه‌ها</span>
-        </div>
-        <div class="video-card-content">
-          <span class="video-index">فعالیت ۰۱</span>
-          <h3>اندازه‌گیری زاویه‌های داخلی مثلث</h3>
-          <p>بررسی تجربی مجموع زاویه‌های داخلی مثلث</p>
-        </div>
-      </a>
-
-      <a class="video-card" href="video2.html">
-        <div class="video-thumbnail">
-          <video muted playsinline preload="metadata" aria-label="پیش‌نمایش ویدئوی زاویه‌های مربع">
-            <source src="assets/example2.mp4" type="video/mp4">
-          </video>
-          <span class="play-icon" aria-hidden="true">▶</span>
-          <span class="video-category">ویژگی چندضلعی‌ها</span>
-        </div>
-        <div class="video-card-content">
-          <span class="video-index">فعالیت ۰۲</span>
-          <h3>زاویه‌های داخلی مربع</h3>
-          <p>بررسی زاویه‌های قائم و مجموع زاویه‌های داخلی</p>
-        </div>
-      </a>
-
-      <a class="video-card" href="video3.html">
-        <div class="video-thumbnail">
-          <video muted playsinline preload="metadata" aria-label="پیش‌نمایش ویدئوی زاویه‌های دایره">
-            <source src="assets/example3.mp4" type="video/mp4">
-          </video>
-          <span class="play-icon" aria-hidden="true">▶</span>
-          <span class="video-category">هندسهٔ دایره</span>
-        </div>
-        <div class="video-card-content">
-          <span class="video-index">فعالیت ۰۳</span>
-          <h3>زاویهٔ مرکزی و زاویهٔ محاطی</h3>
-          <p>بررسی رابطهٔ زاویه‌ها در یک دایره</p>
-        </div>
-      </a>
-
-      <a class="video-card" href="video4.html">
-        <div class="video-thumbnail">
-          <video muted playsinline preload="metadata" aria-label="پیش‌نمایش ویدئوی فعالیت هشت‌ضلعی">
-            <source src="assets/example4.mp4" type="video/mp4">
-          </video>
-          <span class="play-icon" aria-hidden="true">▶</span>
-          <span class="video-category">تحلیل شکل‌ها</span>
-        </div>
-        <div class="video-card-content">
-          <span class="video-index">فعالیت ۰۴</span>
-          <h3>بررسی یک مسئلهٔ هندسی</h3>
-          <p>مشاهده، اندازه‌گیری و تحلیل ویژگی‌های شکل</p>
-        </div>
-      </a>
-
-    </div>
-
-    <p class="section-footnote">
-      نکته: اندازه‌گیری‌های تجربی ممکن است تحت تأثیر دقت ابزار
-      و شیوهٔ استفاده قرار بگیرند؛ نتیجه‌گیری نهایی باید با
-      تعریف‌ها و استدلال ریاضی سازگار باشد.
-    </p>
-
-  </section>
-
-
-  <!-- زاوین دیجیتال -->
-  <section class="content-section digital-section" id="digital">
-
-    <div class="digital-panel">
-
-      <div class="digital-content">
-        <span class="eyebrow">از ابزار فیزیکی تا تجربهٔ دیجیتال</span>
-        <h2>زاوین دیجیتال</h2>
-
-        <p>
-          نسخهٔ دیجیتال زاوین با هدف گسترش تجربهٔ یادگیری هندسه
-          در محیط تعاملی طراحی می‌شود. این بخش می‌تواند امکان
-          بررسی شکل‌ها، مشاهدهٔ تغییرات و آزمودن روابط هندسی
-          را در محیطی مکمل ابزار فیزیکی فراهم کند.
-        </p>
-
-        <span class="coming-soon">در حال توسعه</span>
-
-        <!-- پس از آماده‌شدن ابزار، لینک آن را به این دکمه اضافه کنید. -->
-        <a class="button digital-button" href="#digital">
-          به‌زودی
-        </a>
+    <section class="applications-section" id="applications"><div class="section-wrap">
+      <div class="section-heading"><span class="eyebrow">جعبه ابزار زاوین</span><h2>راه‌های مختلف برای <span class="highlight">کشف هندسه</span></h2><p>از تماشای نمونه‌ها تا دست‌کاری مستقیم شکل‌ها، روش یادگیری دلخواهت را انتخاب کن.</p></div>
+      <div class="application-grid">
+        <article class="application-card app-one"><span class="app-number">01</span><div class="app-symbol">∠</div><h3>آزمایشگاه زاویه‌ها</h3><p>زاویه مرکزی، محاطی و مماس را در کنار هم بررسی کن.</p><a href="zaavin-digital.html">شروع آزمایش <span>←</span></a></article>
+        <article class="application-card app-two"><span class="app-number">02</span><div class="app-symbol">⬡</div><h3>چندضلعی‌ها</h3><p>شکل‌ها را بساز و ویژگی‌های ضلع‌ها و زاویه‌ها را مقایسه کن.</p><a href="zaavin-digital.html">ساختن شکل <span>←</span></a></article>
+        <article class="application-card app-three"><span class="app-number">03</span><div class="app-symbol">↗</div><h3>رسم و اندازه‌گیری</h3><p>با رسم آزاد و اندازه‌گیری، هندسه را به تجربه‌ای عملی تبدیل کن.</p><a href="zaavin-digital.html">ورود به ابزار <span>←</span></a></article>
       </div>
+    </div></section>
 
-      <div class="digital-symbol" aria-hidden="true">
-        <span>∠</span>
-        <span>△</span>
-        <span>○</span>
+    <section class="section-wrap videos-section" id="videos">
+      <div class="section-heading heading-row"><div><span class="eyebrow">تماشا و یادگیری</span><h2>هندسه در چند دقیقه</h2><p>ویدئوهای کوتاه آموزشی را ببین و بعد خودت دست‌به‌کار شو.</p></div><span class="video-badge">ویدئوهای آموزشی</span></div>
+      <div class="video-grid">
+        <a class="video-card" href="video1.html"><div class="video-thumb thumb-one"><span class="play-button">▶</span><span class="thumb-shape">△</span></div><div class="video-info"><span>درس ۰۱</span><h3>آشنایی با شکل‌های هندسی</h3><p>مشاهده و شناخت شکل‌ها</p></div><span class="card-arrow">↖</span></a>
+        <a class="video-card" href="video2.html"><div class="video-thumb thumb-two"><span class="play-button">▶</span><span class="thumb-shape">∠</span></div><div class="video-info"><span>درس ۰۲</span><h3>دنیای زاویه‌ها</h3><p>از رأس تا اندازه‌ی زاویه</p></div><span class="card-arrow">↖</span></a>
+        <a class="video-card" href="video3.html"><div class="video-thumb thumb-three"><span class="play-button">▶</span><span class="thumb-shape">◯</span></div><div class="video-info"><span>درس ۰۳</span><h3>سفر به دایره</h3><p>مرکز، شعاع و وتر</p></div><span class="card-arrow">↖</span></a>
+        <a class="video-card" href="video4.html"><div class="video-thumb thumb-four"><span class="play-button">▶</span><span class="thumb-shape">⬡</span></div><div class="video-info"><span>درس ۰۴</span><h3>کشف چندضلعی‌ها</h3><p>بررسی ضلع‌ها و رأس‌ها</p></div><span class="card-arrow">↖</span></a>
       </div>
+    </section>
 
-    </div>
+    <section class="digital-section" id="digital"><div class="section-wrap digital-inner">
+      <div class="digital-copy"><span class="eyebrow eyebrow-light">تجربه کن، نه فقط تماشا</span><h2>نوبت توست که<br><span>هندسه را کشف کنی.</span></h2><p>با زاوین دیجیتال شکل بساز، زاویه‌ها را بررسی کن و اندازه‌ها را تغییر بده. یادگیری از همین‌جا شروع می‌شود.</p><a class="button digital-button" href="zaavin-digital.html">ورود به زاوین دیجیتال <span>←</span></a><p class="digital-note">چهار فعالیت تعاملی برای ساخت شکل، بررسی زاویه‌ها و اندازه‌گیری روابط هندسی</p></div>
+      <div class="digital-visual"><div class="digital-circle"><div class="digital-cross"></div><div class="digital-dot"></div><span class="digital-label label-a">A</span><span class="digital-label label-b">B</span><span class="digital-label label-o">O</span></div><div class="digital-sticker">آزمایشگاه<br>هندسه</div></div>
+    </div></section>
 
-  </section>
+    <section class="section-wrap team-section" id="team"><div class="team-panel"><div><span class="eyebrow">پشت زاوین</span><h2>ساخته‌شده با کنجکاوی</h2><p>زاوین حاصل تلاش تیمی است که به یادگیری خلاق، آموزش قابل‌دسترس و قدرت تجربه باور دارد.</p></div><div class="team-ornament">ز<span>✳</span></div></div></section>
+  </main>
 
-
-  <!-- سازندگان -->
-  <section class="content-section team-section" id="team">
-
-    <div class="section-heading">
-      <span class="eyebrow">گروه توسعهٔ پروژه</span>
-      <h2>اندیشه‌ای برای یادگیری بهتر</h2>
-      <p>
-        زاوین حاصل تلاش برای پیوند دادن آموزش ریاضی با تجربه،
-        مشاهده و فعالیت یادگیرنده است.
-      </p>
-    </div>
-
-    <div class="team-card">
-      <div class="team-monogram" aria-hidden="true">ز</div>
-
-      <div>
-        <h3>تیم سازندهٔ زاوین</h3>
-        <p>
-          طراحی و توسعهٔ یک ابزار کمک‌آموزشی برای آموزش شهودی
-          مفاهیم هندسی و پشتیبانی از فرایند کشف روابط هندسه.
-        </p>
-      </div>
-    </div>
-
-    <!-- نام اعضا و نقش دقیق هر فرد را پس از تأیید وارد کنید. -->
-
-  </section>
-
-</main>
-
-
-<footer class="site-footer">
-
-  <a href="#home" class="footer-brand">زاوین</a>
-
-  <p>جایی که مشاهده، به کشف هندسه می‌رسد.</p>
-
-  <div class="footer-divider"></div>
-
-  <small>© تمامی حقوق مادی و معنوی این اثر محفوظ است.</small>
-
-</footer>
-
+  <footer class="site-footer"><a class="brand footer-brand" href="#home"><span class="brand-mark">ز</span><span>زاوین</span></a><p>هندسه را کشف کن؛ هر زاویه، یک فرصت تازه است.</p><a href="#home" class="back-top">بازگشت به بالا ↑</a><span class="copyright">© زاوین</span></footer>
+  <script>
+    const links = document.querySelectorAll('.main-nav a');
+    links.forEach(link => link.addEventListener('click', () => {
+      document.querySelector('.main-nav').classList.remove('nav-open');
+    }));
+  </script>
 </body>
-            </html>
+</html>
