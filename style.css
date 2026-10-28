@@ -16,3 +16,136 @@
 @media(max-width:900px){.site-header{align-items:flex-start;flex-direction:column;gap:10px}.main-nav{width:100%}.main-nav a{padding:7px 9px}.hero{margin:18px 15px 0;padding:45px 6% 75px;grid-template-columns:1fr  .8fr}.feature-grid,.application-grid,.video-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.digital-panel{padding:32px}.digital-symbol{min-width:150px}.digital-symbol span{width:48px;height:48px}}
 @media(max-width:620px){.site-header{padding:10px 16px}.brand-symbol{width:42px;height:42px}.main-nav{gap:2px}.main-nav a{font-size:11px;padding:6px 7px}.hero{display:flex;flex-direction:column-reverse;gap:10px;min-height:0;padding:30px 22px 75px;border-radius:23px}.hero-content{width:100%}.hero-visual{width:100%;min-height:270px}.geometry-card{width:235px}.visual-ring{width:75%}.ring-two{width:90%}.hero-title{font-size:61px}.hero-persian{font-size:25px}.hero-description{font-size:13px}.hero-bottom{right:22px;bottom:20px;gap:8px}.hero-line{width:15px}.content-section{padding:58px 17px}.feature-grid,.application-grid,.video-grid,.team-grid{grid-template-columns:1fr}.section-heading{margin-bottom:28px}.digital-panel{flex-direction:column-reverse;align-items:flex-start;padding:28px 22px}.digital-symbol{align-self:center}.video-detail{margin-top:20px;padding:0 15px 50px}.video-detail h1{font-size:25px}.lesson-box{padding:19px}.video-page-header{padding:14px 18px}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}}
+
+/* بخش زاوین دیجیتال */
+
+.digital-section {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+.digital-panel {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 35px;
+  padding: 55px 45px;
+  border: 1px solid #b9a9e8;
+  border-radius: 28px;
+  background: linear-gradient(135deg, #292d49, #48376f);
+  box-shadow: 0 18px 45px rgba(36, 43, 69, 0.15);
+  color: #fffdf8;
+}
+
+.digital-content {
+  flex: 1;
+  text-align: right;
+}
+
+.digital-content .eyebrow {
+  color: #b9e2cf;
+  font-size: 13px;
+}
+
+.digital-content h2 {
+  margin: 15px 0;
+  color: #fffdf8;
+  font-size: clamp(28px, 4vw, 42px);
+  font-weight: 800;
+}
+
+.digital-content p {
+  max-width: 700px;
+  margin: 15px 0 25px;
+  color: #e4e2f0;
+  font-size: 15px;
+  line-height: 2.5;
+}
+
+.digital-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  min-height: 52px;
+  padding: 13px 28px;
+  border: 1px solid #b9e2cf;
+  border-radius: 14px;
+  background: #dce9d6;
+  color: #26352d;
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 800;
+  text-decoration: none;
+  cursor: pointer;
+  transition: transform 0.25s, background 0.25s;
+}
+
+.digital-button:hover {
+  background: #c5dfbd;
+  transform: translateY(-3px);
+}
+
+.digital-symbol {
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  direction: ltr;
+}
+
+.digital-symbol span {
+  display: grid;
+  place-items: center;
+  width: 65px;
+  height: 65px;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.1);
+  color: #dce9d6;
+  font-size: 32px;
+  font-weight: 700;
+}
+
+.digital-symbol span:nth-child(2) {
+  background: rgba(102, 133, 107, 0.45);
+}
+
+.digital-symbol span:nth-child(3) {
+  background: rgba(230, 199, 123, 0.2);
+}
+
+@media (max-width: 768px) {
+  .digital-section {
+    padding: 40px 16px;
+  }
+
+  .digital-panel {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 30px;
+    padding: 32px 22px;
+  }
+
+  .digital-content {
+    text-align: center;
+  }
+
+  .digital-content p {
+    font-size: 13px;
+  }
+
+  .digital-button {
+    width: 100%;
+  }
+
+  .digital-symbol {
+    justify-content: center;
+  }
+
+  .digital-symbol span {
+    width: 58px;
+    height: 58px;
+  }
+}
